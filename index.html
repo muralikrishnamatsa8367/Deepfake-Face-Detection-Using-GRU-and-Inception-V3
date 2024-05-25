@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title style="color: red";"font-size:200%";>Upload Video</title>
+    
+</head>
+<body>
+    <h1>Upload Video</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="video">
+        <input type="submit" value="Predict">
+    </form>
+    <div class="video-container">
+        <video controls id="uploaded-video">
+            <source src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</div>
+<script>
+    // JavaScript to display the uploaded video
+    const videoInput = document.querySelector('input[name="video"]');
+    const video = document.getElementById('uploaded-video');
+
+    videoInput.addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const url = URL.createObjectURL(file);
+        video.src = url;
+    });
+    function validateForm() {
+        const file = videoInput.files[0];
+        if (!file) {
+            alert("Please select a video to upload.");
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
+</body>
+</html>

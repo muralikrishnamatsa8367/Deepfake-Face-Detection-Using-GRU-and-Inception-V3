@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background-image: url('pic.jpeg');
+    
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.prediction {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #32ca0c; /* Blue color for REAL prediction */
+}
+
+.fake {
+    text-align:center;
+    font: size 24px;
+    font-weight:bold;
+    color: #dc3545; /* Red color for FAKE prediction */
+}
+
+.video-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+video {
+    
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
